@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(backround.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #4d4c4c;
+}
+header {
+  width: 100%;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 3%;
+}
+.calendar {
+  width: 40%;
+  background-color: white;
+}
+.eventList {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header {
+  color: #4273df;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2% 5%;
+}
+.days,
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day,
+.weekday {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+.day {
+  cursor: pointer;
+}
+.current-day {
+  font-weight: bold;
+  color: #4273df;
+}
+.weekend {
+  color: rgb(203, 18, 18);
+}
+.selected {
+  background-color: #4273df;
+  color: white;
+}
+#selectedDate {
+  margin-bottom: 20%;
+  color: #4273df;
+}
+#eventForm {
+  display: none;
+  margin-bottom: 5%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}
+#eventForm input {
+  border: none;
+  width: 20rem;
+  padding: 2%;
+}
+#addEventBtn {
+  border: none;
+  padding: 2%;
+  background-color: #4273df;
+  color: white;
+  width: 20%;
+  height: 100%;
+}
+#eventContainer {
+  align-self: flex-start;
+  width: 100%;
+  flex-direction: column;
+}
+.event-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 3%;
+  margin-top: 1%;
+  width: 100%;
+}
+.event {
+  width: 100%;
+}
+.event-even {
+  color: #4d4c4c;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.event-odd {
+  color: #4d4c4c;
+  background-color: #e1f2fd;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.star {
+  margin: 0 2%;
+  background-color: #4273df;
+  height: 2rem;
+  width: 1%;
+  border-radius: 9px;
+}
+.delete {
+  cursor: pointer;
+  color: rgb(189, 8, 8);
+  margin-left: 10px;
+  font-weight: bold;
+}

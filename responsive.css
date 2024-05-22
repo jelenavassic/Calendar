@@ -1,0 +1,36 @@
+@media only screen and (max-width: 1024px) {
+  #addEventBtn {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .calendar {
+    width: 60%;
+    margin-bottom: 5%;
+  }
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  #addEventBtn {
+    width: 30%;
+   }
+  .eventList {
+    width: 60%;
+  }
+  #eventForm {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .calendar,
+  .eventList {
+    width: 90vw;
+  }
+
+  .weekdays {
+    font-size: 0.6rem;
+  }
+}
