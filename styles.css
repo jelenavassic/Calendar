@@ -94,8 +94,9 @@ main {
   padding: 2%;
 }
 #addEventBtn {
+  font-size: 0.8rem;
   border: none;
-  padding: 2%;
+  padding: 1.5%;
   background-color: #4273df;
   color: white;
   width: 20%;
