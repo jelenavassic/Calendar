@@ -23,6 +23,8 @@ const nextMonthBtn = document.getElementById("nextMonth");
 const currentMonthDisplay = document.getElementById("currentMonth");
 const weekdaysContainer = document.querySelector(".weekdays");
 const daysContainer = document.querySelector(".days");
+const eventList = document.querySelector(".eventList");
+
 const eventContainer = document.getElementById("eventContainer");
 const eventForm = document.getElementById("eventForm");
 const eventInput = document.getElementById("eventInput");
@@ -138,7 +140,7 @@ function handleDateClick(day, dayElement) {
   eventForm.style.display = "flex";
   selectedDateDiv.style.display = "block";
   eventContainer.style.display = "flex";
-
+  eventList.style.display = "flex";
   const selectedDate = new Date(currentYear, currentMonth, day);
 
   const eventsOnDate = events.filter((event) => {

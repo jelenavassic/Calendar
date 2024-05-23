@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url(backround.jpg);
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   color: #4d4c4c;
@@ -25,26 +25,33 @@ main {
   padding: 3%;
 }
 .calendar {
-  width: 40%;
-  background-color: white;
+  background-color: rgb(23, 22, 22);
+  border-radius: 20px;
+  padding: 1%;
+  border: none;
 }
 
-#prevMonth, #nextMonth{
-
-  color: #4273df;
+#prevMonth,
+#nextMonth {
+  color: white;
   border: none;
   background: none;
   font-size: 2rem;
 }
 .eventList {
   width: 40%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: rgb(23, 22, 22);
+  border-radius: 20px;
+  padding: 1%;
+  
+  align-self: flex-end;
 }
 .header {
-  color: #4273df;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +65,8 @@ main {
 
 .day,
 .weekday {
-  border: 1px solid #ccc;
+  color: white;
+  border: none;
   padding: 10px;
   text-align: center;
 }
@@ -78,8 +86,9 @@ main {
 }
 #selectedDate {
   margin-bottom: 20%;
-  color: #4273df;
+  color: white;
 }
+ 
 #eventForm {
   display: none;
   margin-bottom: 5%;
@@ -119,13 +128,13 @@ main {
   width: 100%;
 }
 .event-even {
-  color: #4d4c4c;
-  background-color: white;
+  color: white;
+  background-color: #4d4c4c;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .event-odd {
-  color: #4d4c4c;
-  background-color: #e1f2fd;
+  color: white;
+  background-color: #3e3e3e;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .star {
