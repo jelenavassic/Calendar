@@ -28,6 +28,14 @@ main {
   width: 40%;
   background-color: white;
 }
+
+#prevMonth, #nextMonth{
+
+  color: #4273df;
+  border: none;
+  background: none;
+  font-size: 2rem;
+}
 .eventList {
   width: 40%;
   display: flex;
