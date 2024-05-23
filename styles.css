@@ -23,6 +23,7 @@ main {
   align-items: flex-start;
   justify-content: space-around;
   padding: 3%;
+  height: 100%;
 }
 .calendar {
   background-color: rgb(23, 22, 22);
@@ -40,7 +41,7 @@ main {
 }
 .eventList {
   width: 40%;
-  display: none;
+   display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
