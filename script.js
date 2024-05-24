@@ -43,28 +43,27 @@ eventInput.addEventListener("keypress", (event) => {
 
 // Event listener for previous month button
 prevMonthBtn.addEventListener("click", () => {
-    if (currentMonth === 0) {
-      currentMonth = 11;
-      currentYear -= 1;
-    } else {
-      currentMonth -= 1;
-    }
-    renderCalendar();
-    clearHtml();
-  });
-  
-  // Event listener for next month button
-  nextMonthBtn.addEventListener("click", () => {
-    if (currentMonth === 11) {
-      currentMonth = 0;
-      currentYear += 1;
-    } else {
-      currentMonth += 1;
-    }
-    renderCalendar();
-    clearHtml();
-  });
+  if (currentMonth === 0) {
+    currentMonth = 11;
+    currentYear -= 1;
+  } else {
+    currentMonth -= 1;
+  }
+  renderCalendar();
+  clearHtml();
+});
 
+// Event listener for next month button
+nextMonthBtn.addEventListener("click", () => {
+  if (currentMonth === 11) {
+    currentMonth = 0;
+    currentYear += 1;
+  } else {
+    currentMonth += 1;
+  }
+  renderCalendar();
+  clearHtml();
+});
 
 // Save events to local storage
 function saveEvents() {
@@ -127,7 +126,6 @@ function renderCalendar() {
     );
   }
 }
-
 
 function clearHtml() {
   selectedDateDiv.style.display = "none";
@@ -201,7 +199,6 @@ function renderEvents(events) {
   });
 }
 
-
 //Add an event
 function addEvent() {
   const title = eventInput.value.trim();
@@ -234,18 +231,18 @@ window.addEventListener("load", () => {
 //Delete an event
 
 function deleteEventFromList(eventToDelete) {
-    events = events.filter((event) => event !== eventToDelete);
-    saveEvents();
-    // Re-render the events for the currently selected date
-    const selectedDate = new Date(selectedDateDiv.innerText);
-    const day = selectedDate.getDate();
-  
-    // Find the corresponding day element
-    const dayElement = Array.from(daysContainer.querySelectorAll(".day")).find(
-      (el) => parseInt(el.textContent) === day
-    );
-  
-    handleDateClick(day, dayElement);
-  }
+  events = events.filter((event) => event !== eventToDelete);
+  saveEvents();
+  // Re-render the events for the currently selected date
+  const selectedDate = new Date(selectedDateDiv.innerText);
+  const day = selectedDate.getDate();
+
+  // Find the corresponding day element
+  const dayElement = Array.from(daysContainer.querySelectorAll(".day")).find(
+    (el) => parseInt(el.textContent) === day
+  );
+
+  handleDateClick(day, dayElement);
+}
 
 renderCalendar();

@@ -17,6 +17,7 @@
    }
   .eventList {
     width: 60%;
+    align-self: auto;
   }
   #eventForm {
     flex-direction: column;

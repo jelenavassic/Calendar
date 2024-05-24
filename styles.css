@@ -41,6 +41,7 @@ main {
 }
 .eventList {
   width: 40%;
+  height: 50%;
    display: none;
   flex-direction: column;
   justify-content: flex-start;
@@ -49,6 +50,7 @@ main {
   border-radius: 20px;
   padding: 1%;
   align-self: flex-end;
+  overflow-y: auto; 
 }
 .header {
   color: white;
@@ -98,11 +100,14 @@ main {
   gap: 3%;
 }
 #eventForm input {
+  border-radius: 25px;
   border: none;
   width: 20rem;
   padding: 2%;
 }
 #addEventBtn {
+  border-radius: 25px;
+
   font-size: 0.8rem;
   border: none;
   padding: 1.5%;
@@ -123,8 +128,11 @@ main {
   padding: 3%;
   margin-top: 1%;
   width: 100%;
+  border-radius: 25px;
+
 }
 .event {
+
   width: 100%;
 }
 .event-even {
